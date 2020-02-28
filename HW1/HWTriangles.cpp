@@ -1,4 +1,4 @@
-#pragma comment(lib, "glfw3.lib")
+﻿#pragma comment(lib, "glfw3.lib")
 #pragma comment(lib, "glew32.lib")
 #pragma comment(lib, "freeglut.lib")
 
@@ -26,7 +26,7 @@ int main()
 
 	glfwWindowHint(GLFW_SAMPLES, 4); // 4x smoothing
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // in order to use OpenGL 3.3
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); // same reason
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); // the same reason
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); 
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // new OpenGL
 
