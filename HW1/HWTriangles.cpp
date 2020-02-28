@@ -1,4 +1,4 @@
-﻿#pragma comment(lib, "glfw3.lib")
+#pragma comment(lib, "glfw3.lib")
 #pragma comment(lib, "glew32.lib")
 #pragma comment(lib, "freeglut.lib")
 
@@ -44,20 +44,22 @@ int main()
 	glewExperimental = true;
 	if (glewInit() != GLEW_OK) {
 		cout << "An error occured while GLFW initializing!" << endl;
+		glfwTerminate();
 		return -1;
 	}
 
 	// button press reaction
 	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 
-	//background
+	// background
 	glClearColor(0.0f, 0.0f, 0.5f, 0.0f);
 
-	//create Vertex Array Object 
+	// create Vertex Array Object 
 	GLuint VertexArrayID;
 	glGenVertexArrays(1, &VertexArrayID);
 	glBindVertexArray(VertexArrayID);
 
+	// create programs from shaders
 	GLuint programID1 = LoadShaders("hw1vertex.vertexshader", "hw1triang1.fragmentshader");
 	GLuint programID2 = LoadShaders("hw1vertex.vertexshader", "hw1triang2.fragmentshader");
 
