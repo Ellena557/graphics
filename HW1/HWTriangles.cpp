@@ -96,7 +96,7 @@ int main()
 
 		// vertixes will be the 1st buffer attribute
 		glEnableVertexAttribArray(0);
-	    glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
+	        glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
 
 		// 3=size, GL_FLOAT=type, GL_FALSE=values are not normalized, 0=step
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
