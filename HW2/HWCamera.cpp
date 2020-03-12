@@ -100,6 +100,7 @@ int main()
 	double pos = 0.0;
 	double pi = 3.1415;
 
+	// initial pos
 	vec3 cameraPos = glm::vec3(3, 2, 0);
 	vec3 originPos = glm::vec3(0, 0, 0);
 	vec3 headPos = glm::vec3(0, 1, 0);
