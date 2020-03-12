@@ -71,6 +71,9 @@ int main()
 
 	// Projection matrix
 	glm::mat4 Projection = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 100.0f);
+	
+	// Model matrix : an identity matrix
+	glm::mat4 Model = glm::mat4(1.0f);
 
 	// 6 vertexes of the triangles
 	static const GLfloat g_vertex_buffer_data[] = {
@@ -109,9 +112,6 @@ int main()
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 		glm::mat4 View = glm::lookAt(cameraPos, originPos, headPos);
-
-		// Model matrix : an identity matrix
-		glm::mat4 Model = glm::mat4(1.0f);
 
 		// ModelViewProjection : multiplication of our 3 matrices
 		glm::mat4 MVP = Projection * View * Model;
